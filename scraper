@@ -1,0 +1,11 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+class TcmbCurrencyData:
+    def __init__(self):
+        driver = webdriver.ChromeOptions()
+        self.driver = webdriver.Chrome(options=op)
+        url = "https://www.tcmb.gov.tr/wps/wcm/connect/tr/tcmb+tr/main+page+site+area/bugun"
+        self.driver.get(url)
+        self.Data = driver.find_element(By.CLASS_NAME,"kurlarTablo")
+        
